@@ -19,6 +19,7 @@
     <description>Sparta Athlete.</description>
     <author email="sbirendorf@gmail.com" href="">SpartaTrac Team</author>
     <content src="index.html" />
+    <icon src="icon.png" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -41,4 +42,5 @@
     <preference name="PageLength" value="0" />
     <preference name="PaginationBreakingMode" value="page" />
     <preference name="PaginationMode" value="unpaginated" />
+    <preference name="prerendered-icon" value="true" />
 </widget>

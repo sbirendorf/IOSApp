@@ -10,6 +10,8 @@
     <description>Sparta Athlete.</description>
     <author email="sbirendorf@gmail.com" href="">SpartaTrac Team</author>
     <content src="index.html" />
+    <preference name="prerendered-icon" value="true" />
+    <icon src="icon.png" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
