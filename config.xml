@@ -1,5 +1,5 @@
-<?xml version='1.0' encoding='utf-8'?>
-<widget id="com.spartascience.spartatrac" version="37.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<?xml version='38.0' encoding='utf-8'?>
+<widget id="com.spartascience.spartatrac" version="38.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>SpartaTrac</name>
     <description>Sparta Athlete.</description>
     <author email="sbirendorf@gmail.com" href="">SpartaTrac Team</author>

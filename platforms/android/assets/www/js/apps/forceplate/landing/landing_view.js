@@ -24,11 +24,11 @@ define(["app",
                                 labels: [data.scans[c].date],
                                 datasets: [
                                     {
-                                        fillColor: '#9C9192',
+                                        fillColor: '#396410',
                                         data: [data.scans[c].left]
                                     },
                                     {
-                                        fillColor: '#000',
+                                        fillColor: '#3a6078',
                                         data: [data.scans[c].right]
                                     }
                                 ]
@@ -39,13 +39,13 @@ define(["app",
                     var lineChartData = {
                         labels: lineLowDates,
                         datasets: [{
-                            strokeColor: '#9C9192',
-                            pointColor: '#9C9192',
+                            strokeColor: '#396410',
+                            pointColor: '#396410',
                             fillColor: "rgba(220,220,220,0.01)",
                             data: lineLowLeft
                         }, {
-                            strokeColor: '#000',
-                            pointColor: "#000",
+                            strokeColor: '#3a6078',
+                            pointColor: "#3a6078",
                             fillColor: "rgba(220,220,220,0.01)",
                             data: lineLowRight
                         },

@@ -7,8 +7,6 @@ SpartaMain.module("Init", function(Init, SpartaMain, Backbone, Marionette, $, _)
             postLoginData: function (data) {
                 var http = new XMLHttpRequest();
                 var params = "name="+ data.user + "&pass=" + data.pw;
-              //  var params = "name=sparta&pass=sparta165a";
-              //  var params = "name=sparta&pass=sp*rt*165*";
             
               //  data.url="localhost/misparta/www";
              //   data.url="dev1.spartatrac.com";

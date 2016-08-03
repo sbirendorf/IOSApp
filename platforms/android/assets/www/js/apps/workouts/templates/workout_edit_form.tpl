@@ -31,7 +31,7 @@
                     <div class="hide">
                         <input type="text" value="<%- comp.mov_nid[mov_number] %>" name="movement_nid[<%- comp_number-1 %>][<%- mov_number %>][]"> 
                     </div>
-                    
+                    <input class="timer-timestamp hide" type="number" value="" name="timerStart[<%- comp_number-1 %>]">
                     <h5 style="text-align: center;"><strong>Movement:<%= comp.mov_title[mov_number] %></strong></h5><br>
                     <table class=workout-table>
                         <tr style="background: gray;color: white;"><th><%- comp.mov_set_reps[mov_number][0].int_type %></th><th>Target</th><th><%- comp.mov_set_reps[mov_number][0].vol_type %></th><th>Actual</th></tr>

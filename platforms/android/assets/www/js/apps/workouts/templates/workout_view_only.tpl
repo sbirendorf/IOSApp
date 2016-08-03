@@ -1,5 +1,6 @@
     <form class="form-inputs">
         <h4 style="text-align: center;"> <%- days.workout_title %> - <%- days.workout_day_view %></h4>
+        <a style="float:right;" href="#workout/create/<%- nid %>/<%- uid %>/<%- days.day_number %>"><i class="btn wo-log ion-play" title="Log Workout"> Start The Workout</i></a>
         
         Strenght Level:<%- profile.major_lower %>.<%- profile.minor_lower %><br>
         Skills Level:<%- profile.major_upper  %>.<%- profile.minor_upper  %><br>

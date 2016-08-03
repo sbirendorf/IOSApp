@@ -38,8 +38,7 @@
 						              <thead class="thead-inverse">
 						                  <tr>
 						                      <th>Workout</th>
-						                      <th>Start</th>
-						                      <th>View</th>
+						                      <th>View/Start</th>
 						                  </tr>
 						              </thead>
 						              <tbody>
@@ -47,9 +46,6 @@
 							                 <% if(e.wo_status == 'trac' && e.best_match == true) { %>
 									           	 <tr style="height: 48px;">
 						                                <td><%- e.title %>- <%- e.workout_day %></td>
-						                                <td>
-						                                	<a href="#workout/create/<%- e.nid %>/<%- e.uid %>/<%- e.day %>"><i class="btn wo-log ion-play" title="Log Workout"></i></a>
-						                                </td>
 						                                <td><a href="#workout/view/<%- e.nid %>/<%- e.uid %>/<%- e.day %>"><i class="btn wo-log ion-eye" title="View Workout"></i></a></td>
 						                     	 </tr>
 									         <% } %>
@@ -57,9 +53,6 @@
 									         <% if(e.wo_status == 'Ready') { %>
 									           	 <tr style="height: 48px;">
 						                                <td><%- e.title %>- <%- e.workout_day %></td>
-						                                <td>
-						                                	<a href="#workout/<%- e.nid %>/edit"><i class="btn wo-log ion-play" title="Log Workout"></i></a>
-						                                </td>
 						                                <td><a href="#workout/<%- e.nid %>/edit"><i class="btn wo-log ion-eye" title="View Workout"></i></a></td>
 						                     	 </tr>
 									         <% } %>

@@ -24,15 +24,15 @@ define(["app",
                     },
                     events: {
                         "submit": "saveClicked",
-                        "mouseover .js-datepicker": "createDatePicker"
+                      //  "mouseover .js-datepicker": "createDatePicker"
                     },
-                     createDatePicker: function (e) {
-                        $(e.currentTarget).datepicker({
-                            dateFormat: "yy-mm-dd",
-                            showOtherMonths: true,
-                            selectOtherMonths: true
-                        });
-                    },
+                    //  createDatePicker: function (e) {
+                    //     $(e.currentTarget).datepicker({
+                    //         dateFormat: "yy-mm-dd",
+                    //         showOtherMonths: true,
+                    //         selectOtherMonths: true
+                    //     });
+                    // },
                     saveClicked: function (e) {
                         e.stopPropagation();
                         e.preventDefault();

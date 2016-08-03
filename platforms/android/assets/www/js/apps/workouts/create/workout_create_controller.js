@@ -9,10 +9,15 @@ function (SpartaMain, View,Common) {
                         var fetchingData = SpartaMain.request("common:getModal", "api/new_workout/"+tid+"/"+uid+"/"+day);
                         fetchingData.done(function (Data) {
                                 console.log(Data);
-                            var need = new NewPage.FormPage({
-                                model: Data
+                                var nid = Data.attributes.nid;
+                            // var need = new NewPage.FormPage({
+                            //     model: Data
+                            // });
+                            // SpartaMain.MainRegion.show(need);
+                            require(["apps/workouts/edit/workout_edit_controller"], function (Controller) {
+                                Controller.editWorkoutsPage(nid);
+                                SpartaMain.navigate('#workout/'+nid+'/edit');
                             });
-                            SpartaMain.MainRegion.show(need);
                         });
                         fetchingData.fail(function (err) {
                                 var error = new Common.ServerError({
