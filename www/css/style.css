@@ -2559,22 +2559,9 @@ thead {
 }
 
 /* Profile container */
-#act-region {
-    margin-top: 170px;
-}
-.edit-profile{
-    margin-left: -15px;
-}
-/* Profile sidebar */
-.profile-sidebar {
-  padding: 20px 0 10px 0;
-  background: #fff;
-}
-.profile-rightsidebar {
-    float: left;
-    margin-top: -204px;
-    margin-left: 142px;
-    width: 60%;
+.img-left {
+    min-width: 50%;
+    margin-left: -20px;
 }
 .profile-tabs {
     font-size: 0.8em;
@@ -2716,4 +2703,7 @@ form.wellnes-form {
 }
 #act-region .contact img {
     border-radius: 10%;
+}
+.btn:hover {
+    background-color: #b51010;
 }

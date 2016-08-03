@@ -41,6 +41,7 @@ define(["app",
                         e.stopPropagation();
                         e.preventDefault();
                         var data = Backbone.Syphon.serialize(this);
+                        console.log(data);
                         _finishedClicked(data);
                     },
                     onShow: function () {

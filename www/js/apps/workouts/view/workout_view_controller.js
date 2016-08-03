@@ -8,10 +8,11 @@ function (SpartaMain, View,Common) {
                 require(["entities/common"], function () {
                         var fetchingData = SpartaMain.request("common:getModal", "api/new_workout/"+tid+"/"+uid+"/"+day+"/1");
                         fetchingData.done(function (Data) {
-                            var need = new ViewPage.FormPage({
+                            console.log(Data);
+                            var wo = new ViewPage.FormPage({
                                 model: Data
                             });
-                            SpartaMain.MainRegion.show(need);
+                            SpartaMain.MainRegion.show(wo);
                         });
                         fetchingData.fail(function (err) {
                                 var error = new Common.ServerError({

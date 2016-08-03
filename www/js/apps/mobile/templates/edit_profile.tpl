@@ -47,9 +47,9 @@
                     <label for="edit-title">Confirm Password:
                         <input type="password" maxlength="255" name="password_confirm" id="confirm_password" size="60" value="<%-password %>"  />
                     </label>
-
-                    Change Sport Position
-                    <br><br>
+                    
+                    <h5>Change Sport Position</h5>
+                    <br>
                     <label>Sport:</label>
                     <select name="sport" class="browser-default" id="sport" required>
                         <option value="Other">Other</option>
@@ -74,7 +74,7 @@
                         <option value="<%= a%>"<% if(subPosition.value == a) { %> selected <% } %><%= a %>><%= a %></option>
                         <% }); %>
                     </select>
-
+                    <br>
             <label for="edit-title">Date Of Birth: </label>
             <input type="text" class="js-datepicker" maxlength="255" name="dateOfBirth" id="edit-date-of-birth" size="60" value="<%-dateOfBirth %>" placeholder=""  /><br>
             <label>Gender:</label>

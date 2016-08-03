@@ -10,13 +10,13 @@
                 <div id="bar_chart" class="card animated fadeinup delay-3">
                     <div class="legend">
                         <h5 class="uppercase">Lower Body Balance</h5>
-                        <p><span class="data-color" style="background: rgb(156,145,146);"></span>Left
-                           <span class="data-color" style="background: #000;"></span>Right
+                        <p><span class="data-color" style="background: #396410;"></span>Left
+                            <span class="data-color" style="background: #3a6078;"></span>Right
                         </p>
                     </div>
 
                     <div class="barChartCont">
-                        <canvas id="LowbarChart<%- scan %>"></canvas>
+                        <canvas id="LowbarChart<%- scan %>" style="width: 95%"></canvas>
                     </div>
                 </div>
             </div>
@@ -31,8 +31,8 @@
             <div class="legend">
                 <h5 class="uppercase">Lower Body Timeline </h5>
                     <p>
-                     <span class="data-color" style="background: rgb(156,145,146);"></span>Left
-                     <span class="data-color" style="background: #000;"></span>Right
+                     <span class="data-color" style="background: #396410;"></span>Left
+                     <span class="data-color" style="background: #3a6078;"></span>Right
                     </p>
             </div>
             <div class="lineChartCont">
@@ -50,8 +50,8 @@
                 <div id="bar_chart" class="card animated fadeinup delay-3">
                     <div class="legend">
                         <h5 class="uppercase">Upper Body Balance</h5>
-                        <p><span class="data-color" style="background: rgb(156,145,146);"></span>Left
-                           <span class="data-color" style="background: #000;"></span>Right
+                        <p> <span class="data-color" style="background: #396410;"></span>Left
+                     <span class="data-color" style="background: #3a6078;"></span>Right
                         </p>
                     </div>
 
@@ -71,8 +71,8 @@
             <div class="legend">
                 <h5 class="uppercase">Upper Body Timeline </h5>
                     <p>
-                     <span class="data-color" style="background: rgb(156,145,146);"></span>Left
-                     <span class="data-color" style="background: #000;"></span>Right
+                     <span class="data-color" style="background: #396410;"></span>Left
+                     <span class="data-color" style="background: #3a6078;"></span>Right
                     </p>
             </div>
             <div class="lineChartCont">

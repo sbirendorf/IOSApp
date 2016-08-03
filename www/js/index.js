@@ -55,7 +55,7 @@ var WorkoutTimer= {
          //change the row color
         var number = WorkoutTimer.GetComplex(target); 
         WorkoutTimer.ChangeRowColor(number);
-
+        WorkoutTimer.InsertTimeStamp(number);
         this.timer = setInterval(function() {
 
             var timer = $('.'+className+number).html();
@@ -107,8 +107,10 @@ var WorkoutTimer= {
         $("#accordion-"+number +" .set-number").text(currentSetNum+1);
         
         WorkoutTimer.ChangeRowColor(number);
-
-
-       
-    }
+    },
+    //add the time stamp to the timer field
+    InsertTimeStamp: function(number) {
+        var now = new Date().getTime();
+        $("#accordion-"+number +" .timer-timestamp").val(now);
+    },
 };

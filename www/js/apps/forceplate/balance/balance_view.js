@@ -25,11 +25,11 @@ define(["app",
                                 labels: [data.lower[c].date],
                                 datasets: [
                                     {
-                                        fillColor: '#9C9192',
+                                        fillColor: '#396410',
                                         data: [data.lower[c].left]
                                     },
                                     {
-                                        fillColor: '#000',
+                                        fillColor: '#3a6078',
                                         data: [data.lower[c].right]
                                     }
                                 ]
@@ -40,14 +40,14 @@ define(["app",
                     var lineChartData = {
                         labels: lineLowDates,
                         datasets: [{
-                            strokeColor: '#9C9192',
-                            pointColor: '#9C9192',
-                            fillColor: "rgba(220,220,220,0.01)",
+                            strokeColor: '#396410',
+                            pointColor: '#396410',
+                            fillColor: "#396410",
                             data: lineLowLeft
                         }, {
-                            strokeColor: '#000',
-                            pointColor: "#000",
-                            fillColor: "rgba(220,220,220,0.01)",
+                            strokeColor: '#3a6078',
+                            pointColor: "#3a6078",
+                            fillColor: "#3a6078",
                             data: lineLowRight
                         },
                         ]
@@ -76,11 +76,11 @@ define(["app",
                                 labels: [data.upper[c].date],
                                 datasets: [
                                     {
-                                        fillColor: '#9C9192',
+                                        fillColor: '#396410',
                                         data: [data.upper[c].left]
                                     },
                                     {
-                                        fillColor: '#000',
+                                        fillColor: '#3a6078',
                                         data: [data.upper[c].right]
                                     }
                                 ]
@@ -91,14 +91,14 @@ define(["app",
                     var lineChartData = {
                         labels: lineLowDates,
                         datasets: [{
-                            strokeColor: '#9C9192',
-                            pointColor: '#9C9192',
-                            fillColor: "rgba(220,220,220,0.01)",
+                            strokeColor: '#396410',
+                            pointColor: '#396410',
+                            fillColor: "#396410",
                             data: lineLowLeft
                         }, {
-                            strokeColor: '#000',
-                            pointColor: "#000",
-                            fillColor: "rgba(220,220,220,0.01)",
+                            strokeColor: '#3a6078',
+                            pointColor: "#3a6078",
+                            fillColor: "#3a6078",
                             data: lineLowRight
                         },
                         ]

@@ -19,7 +19,6 @@ define(["app",
                 Main.LandingPage = Marionette.ItemView.extend({
                     template: LandingPageTpl,
                     templateHelpers: function () {
-                        console.log(this.model.attributes);
                         return {list: this.model.attributes};
                     },
                 });

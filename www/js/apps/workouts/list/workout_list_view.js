@@ -1,9 +1,7 @@
 define(["app",
     "tpl!apps/workouts/templates/workout_list_tabs.tpl",
-    "tpl!apps/workouts/templates/workout_list_item.tpl",
-    "tpl!apps/workouts/templates/workouts_list_header.tpl",
     "backbone.syphon"],
-        function (SpartaMain,WorkoutsTabsTpl, WorkoutItemTpl,WorkoutHeadTpl) {
+        function (SpartaMain,WorkoutsTabsTpl) {
             SpartaMain.module("Workout.List", function (List, SpartaMain, Backbone, Marionette, $, _) {
                 List.WorkoutsListTabs = Marionette.ItemView.extend({
                     className: 'workout_tabs_list',
@@ -19,20 +17,9 @@ define(["app",
                         });
                     }
                 });
-               List.WorkoutsListItem = Marionette.ItemView.extend({
-                    className: 'workout_item',
-                    template: WorkoutItemTpl,
-                    tagName: "tr"
-                    
-                });
+               
 
-                List.WorkoutsList = Marionette.CompositeView.extend({
-                    template: WorkoutHeadTpl,
-                    tagName: "table",
-                    className: "table table-hover striped workouts-list",
-                    childViewContainer: "tbody",
-                    childView: List.WorkoutsListItem
-                });
+     
             });
             return SpartaMain.Workout.List;
         });
