@@ -6,7 +6,7 @@
         <param name="onload" value="true" />
     </feature>
     <allow-intent href="market:*" />
-    <name>SpartaTrac</name>
+    <name>SpartaTrac1</name>
     <description>Sparta Athlete.</description>
     <author email="sbirendorf@gmail.com" href="">SpartaTrac Team</author>
     <content src="index.html" />

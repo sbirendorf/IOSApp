@@ -2707,3 +2707,6 @@ form.wellnes-form {
 .btn:hover {
     background-color: #b51010;
 }
+#slide-out-left li a {
+    font-size: 14px;
+}
