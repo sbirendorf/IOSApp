@@ -9,7 +9,6 @@ define(["app",
                             var load = new CommonView.Loading();
                             SpartaMain.MainRegion.show(load);
                         }
-                        console.log(data);
                         var fetchingData = SpartaMain.request("common:postData","api/create_workout", data);
                         fetchingData.done(function (Data) {
                                 var msg = new CommonView.Messages({model: Data});

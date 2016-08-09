@@ -74,7 +74,7 @@ define(["app",
             return SpartaMain.Workout.EditPage;
         });
  
- function _finishedClicked(data,type) {                     
+ function _finishedClicked(data,type) {                   
     require(["apps/workouts/common/workout_common_controller"], function (File) {
         File.createWorkout(data,type);
     });

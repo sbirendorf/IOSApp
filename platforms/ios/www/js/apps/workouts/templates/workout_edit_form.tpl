@@ -16,7 +16,7 @@
                     <input style="display:none;" readonly type="text" value="<%= comp.name %>" name="complex_name[<%- comp_number-1 %>][]">
 
                     <input class="hide" type="textarea" readonly value="<%= comp.note %>" name="notes[<%- comp_number-1 %>][]">
-                    <input class="hide" readonly type="text" value="<%= comp.timer %>" name="timer[<%- comp_number-1 %>][]">
+                    <input class="hide" readonly type="text" value="<%= comp.timer %>" name="timer[<%- comp_number-1 %>]">
                     <label>Notes:<%= comp.notes %></label><br>
                      <button id="start" class="btn btn-success start-set"><span class="ion-play"></span>Start</button>
                       <button id="stop" class="btn btn-danger stop-set" ><span class="ion-stop"></span> Stop</button>
