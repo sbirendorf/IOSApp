@@ -35,14 +35,14 @@ define(["app",
                         e.preventDefault();
                         $(".wo_status").val(1);
                         var data = Backbone.Syphon.serialize(this);
-                        _finishedClicked(data);
+                        _finishedClicked(data,"saved");
                     },
                     finishedClicked: function (e) {
                         e.stopPropagation();
                         e.preventDefault();
                         var data = Backbone.Syphon.serialize(this);
                         console.log(data);
-                        _finishedClicked(data);
+                        _finishedClicked(data,"finished");
                     },
                     onShow: function () {
                         function close_accordion_section() {
@@ -67,14 +67,15 @@ define(["app",
                             e.preventDefault();
                         });
                          close_accordion_section();
+                           
                     }
                 });
             });
             return SpartaMain.Workout.EditPage;
         });
  
- function _finishedClicked(data) {                     
+ function _finishedClicked(data,type) {                     
     require(["apps/workouts/common/workout_common_controller"], function (File) {
-        File.createWorkout(data);
+        File.createWorkout(data,type);
     });
 }

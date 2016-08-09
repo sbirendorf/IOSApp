@@ -2,7 +2,7 @@
     <h4 style="    text-align: center;"> <%- field_wo_workout_title[0].value %> - <%- wo_day_view %></h4>
     <div class="form-error"></div>
 
-    Strenght Level:<%- profile.major_upper  %>.<%- profile.minor_upper  %><br>
+    Strength Level:<%- profile.major_upper  %>.<%- profile.minor_upper  %><br>
     Skills Level:<%- profile.major_lower %>.<%- profile.minor_lower %><br>
     <br>
 
@@ -32,7 +32,7 @@
                         <input type="text" value="<%- comp.mov_nid[mov_number] %>" name="movement_nid[<%- comp_number-1 %>][<%- mov_number %>][]"> 
                     </div>
                     <input class="timer-timestamp hide" type="number" value="" name="timerStart[<%- comp_number-1 %>]">
-                    <h5 style="text-align: center;"><strong>Movement:<%= comp.mov_title[mov_number] %></strong></h5><br>
+                    <h5 style="text-align: center;"><strong><%= comp.mov_title[mov_number] %></strong></h5><br>
                     <table class=workout-table>
                         <tr style="background: gray;color: white;"><th><%- comp.mov_set_reps[mov_number][0].int_type %></th><th>Target</th><th><%- comp.mov_set_reps[mov_number][0].vol_type %></th><th>Actual</th></tr>
                         <% _(comp.mov_set_reps[mov_number]).each(function(set,set_number) { %>
@@ -41,7 +41,7 @@
                             <td><input class="workout-cell" readonly type="number" value="<%- set.goal %>" name="goal[<%- comp_number-1 %>][<%- mov_number %>][<%- set_number %>][]"></td>
                             <td><input class="workout-cell" readonly type="number" value="<%- set.target %>" name="target[<%- comp_number-1 %>][<%- mov_number %>][<%- set_number %>][]"></td>
                             <td><input class="workout-cell"  readonly type="number" value="<%- set.load %>" name="reps[<%- comp_number-1 %>][<%- mov_number %>][<%- set_number %>][]"></td>
-                            <td><input class="workout-cell"  type="number" value="<%- set.load %>" name="actual[<%- comp_number-1 %>][<%- mov_number %>][<%- set_number %>][]"></td>
+                            <td><input class="workout-cell enter" onClick="this.select();" type="tel" value="<%- set.actual %>" name="actual[<%- comp_number-1 %>][<%- mov_number %>][<%- set_number %>][]"></td>
 
                             <td class="hide"><input type="text" value="<%- set.vol_type %>" name="vol_type[<%- comp_number-1 %>][<%- mov_number %>][<%- set_number %>][]"></td>
                             <td class="hide"><input type="text" value="<%- set.int_type %>" name="int_type[<%- comp_number-1 %>][<%- mov_number %>][<%- set_number %>][]"></td>

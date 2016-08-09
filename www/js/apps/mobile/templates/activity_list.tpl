@@ -8,12 +8,14 @@
                <% _(list).each(function(t,num) { %>
                     <div class="contact">
                         <% if(t.type == 'scan') { %>
-                              <img alt="" src="img/ScanIcon.png">
-                        <% }else if(t.type == 'landing' || t.type == 'balance'){ %>
-                              <img alt="" src="img/BalIcon.png">
+                              <a href="#scan"> <img alt="" src="img/ScanIcon.png"></a>
+                        <% }else if( t.type == 'balance'){ %>
+                              <a href="#balance"> <img alt="" src="img/BalIcon.png"></a>
                         <% }else if(t.type == 'notification'){ %>
                                <span class="date"><%- num %><br></span>  <br>
-                        <%  }%>
+                        <% }else if(t.type == 'landing' ){ %>
+                              <a href="#landing"> <img alt="" src="img/BalIcon.png"></a>
+                        <% }%>
                        
                         <div class="dot z-depth-1">
                         </div>
@@ -23,7 +25,7 @@
                               <span><%- t.value.field_no_note_body_value %></span>
                         <% }else { %>
                              <p>
-                                 New <%- t.type %> 
+                                 <a href="#<%- t.type %>"> New <%- t.type %> </a>
                             </p>
                             <span><%- t.date %></span>
                         <% } %>

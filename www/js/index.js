@@ -53,20 +53,26 @@ var WorkoutTimer= {
 
     Start: function(className,target) {
          //change the row color
+         console.log(target);
         var number = WorkoutTimer.GetComplex(target); 
         WorkoutTimer.ChangeRowColor(number);
         WorkoutTimer.InsertTimeStamp(number);
         this.timer = setInterval(function() {
 
             var timer = $('.'+className+number).html();
+            if(timer == null){
+                WorkoutTimer.Stop();
+                return;
+            }
             timer = timer.split(':');
             var minutes = parseInt(timer[0], 10);
             var seconds = parseInt(timer[1], 10);
             if(isNaN(minutes) || isNaN(seconds)){
+                WorkoutTimer.Stop();
                 return;
             }
             seconds -= 1;
-            if (minutes < 0) return clearInterval(interval);
+            if (minutes < 0) return WorkoutTimer.Stop();
             if (minutes < 10 && minutes.length != 2) minutes = '0' + minutes;
             if (seconds < 0 && minutes != 0) {
                 minutes -= 1;
@@ -80,6 +86,7 @@ var WorkoutTimer= {
                 navigator.vibrate(1000);
                 WorkoutTimer.Reset('the-clock-',target);
                 WorkoutTimer.IncreaseSet(number);
+                WorkoutTimer.ModalWindow('the-clock-',target);
             }
 
         }, 1000);
@@ -113,4 +120,10 @@ var WorkoutTimer= {
         var now = new Date().getTime();
         $("#accordion-"+number +" .timer-timestamp").val(now);
     },
+    ModalWindow: function(className,target) {
+       alert("Set is Over");
+        WorkoutTimer.Start(className,target);
+    },
 };
+
+

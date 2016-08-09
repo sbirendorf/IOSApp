@@ -2,7 +2,7 @@
         <h4 style="text-align: center;"> <%- days.workout_title %> - <%- days.workout_day_view %></h4>
         <a style="float:right;" href="#workout/create/<%- nid %>/<%- uid %>/<%- days.day_number %>"><i class="btn wo-log ion-play" title="Log Workout"> Start The Workout</i></a>
         
-        Strenght Level:<%- profile.major_lower %>.<%- profile.minor_lower %><br>
+        Strength Level:<%- profile.major_lower %>.<%- profile.minor_lower %><br>
         Skills Level:<%- profile.major_upper  %>.<%- profile.minor_upper  %><br>
         <br>
     <div class="accordion">
@@ -17,7 +17,7 @@
 
                     <% _(comp.details).each(function(mov,mov_number) { %>
 
-                    <h5 style="text-align: center;"><strong>Movement:<%= mov.movement_title %></strong></h5><br>
+                    <h5 style="text-align: center;"><strong><%= mov.movement_title %></strong></h5><br>
                     <table class=workout-table>
                         <tr style="background: gray;color:white;"><th><%- mov.int_unit %></th><th>Target</th><th>Actual</th><th><%- mov.vol_unit %></th></tr>
                         <% _(mov.goal).each(function(set,set_number) { %>

@@ -31,7 +31,7 @@
                         <input  type="text" value="<%- mov.weight_type %>" name="weight_type[<%- comp_number %>][<%- mov_number %>][]"> 
                         <input type="text" value="<%- mov.movement_ref %>" name="movement_nid[<%- comp_number %>][<%- mov_number %>][]"> 
                     </div>
-                    <h5 style="text-align: center;"><strong>Movement:<%= mov.movement_title %></strong></h5><br>
+                    <h5 style="text-align: center;"><strong><%= mov.movement_title %></strong></h5><br>
                     <table class=workout-table>
                         <tr style="background: gray;color:white;"><th><%- mov.int_unit %></th><th>Target</th><th><%- mov.vol_unit %></th><th>Actual</th></tr>
                         <% _(mov.goal).each(function(set,set_number) { %>

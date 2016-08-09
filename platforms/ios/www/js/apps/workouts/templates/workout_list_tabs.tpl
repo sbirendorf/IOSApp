@@ -13,6 +13,7 @@
 						                  <tr>
 						                      <th>Workout</th>
 						                      <th>Date</th>
+						                      <th>Status</th>
 						                      <th>Edit</th>
 						                  </tr>
 						              </thead>
@@ -24,7 +25,10 @@
 						                                <td>
 						                                	<%- e.wo_date %>
 						                                </td>
-						                                <td><a href="#workout/<%- e.nid %>/edit" class="btn" style="background:black;"><i class="ion-edit"></i></a></td>
+						                                <th><%- e.wo_status %></th>
+						                                <td>
+						                                <a href="#workout/<%- e.nid %>/edit" class="btn" style="background:black;"><i class="ion-edit"></i></a>
+						                                </td>
 						                     	 </tr>
 									         <% } %>
 						                     

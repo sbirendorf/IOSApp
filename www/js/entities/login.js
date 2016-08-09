@@ -8,7 +8,7 @@ SpartaMain.module("Init", function(Init, SpartaMain, Backbone, Marionette, $, _)
                 var http = new XMLHttpRequest();
                 var params = "name="+ data.user + "&pass=" + data.pw;
             
-              //  data.url="localhost/misparta/www";
+             //   data.url="localhost/misparta/www";
              //   data.url="dev1.spartatrac.com";
                 http.open("POST", "https://"+data.url+"/api/login", true);
                 //Send the proper header information along with the request

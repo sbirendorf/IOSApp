@@ -4,7 +4,7 @@
     <div class="edit-profile">
 
             <div class="profile-userpic">
-                <img src="<%= filePicture %>" class="img-responsive" style="height:190px; width:15%" alt="">
+                <img src="<%= filePicture %>" class="img-responsive" style="height:140px; width:15%" alt="">
             </div>
             <a href="#<%- nid %>/user_edit" style="float: left;margin-top: 165px;margin-left: 5px;" class="js-upload"><i class="ion-camera" title="Edit Picture"></i></a>
 

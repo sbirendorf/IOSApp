@@ -2676,10 +2676,14 @@ label {
 }
 .workout-list th,.workout-table th {
     padding: 5px;
+    text-align: center;
 }
 .workout-cell{width: 30px;text-align: center;}
 .workout-list td {
     padding: 5px;
+}
+input.workout-cell.enter:focus {
+    background: #9e9e9e;
 }
 form.wellnes-form {
     width: 110%;
@@ -2689,9 +2693,10 @@ form.wellnes-form {
     background: #000000;
 }
 /* workout matrix table */
-.workout-table input[type=text],input[type=number]{
+.workout-table input[type=text],input[type=number],input[type=tel]{
     margin: 0 0 0px 0;
     height: 4rem;
+    font-size: 14px;
     color: black;
 }
 .workout-table input[type=text]:focus:not([readonly]),  input[type=number]:focus:not([readonly]) {
@@ -2701,10 +2706,13 @@ form.wellnes-form {
 .contact .dot {
     border: 4px solid #a51b2c;
 }
+#act-region  {
+    margin-top: -30px;
+}
 #act-region .contact img {
     border-radius: 10%;
 }
-.btn:hover {
+.workout_tabs_list .btn:hover {
     background-color: #b51010;
 }
 #slide-out-left li a {
