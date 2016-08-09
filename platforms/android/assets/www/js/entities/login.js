@@ -8,16 +8,16 @@ SpartaMain.module("Init", function(Init, SpartaMain, Backbone, Marionette, $, _)
                 var http = new XMLHttpRequest();
                 var params = "name="+ data.user + "&pass=" + data.pw;
             
-                data.url="localhost/misparta/www";
+             //   data.url="localhost/misparta/www";
              //   data.url="dev1.spartatrac.com";
-                http.open("POST", "http://"+data.url+"/api/login", true);
+                http.open("POST", "https://"+data.url+"/api/login", true);
                 //Send the proper header information along with the request
                 http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                 http.onreadystatechange = function() {//Call a function when the state changes.
                   if(http.readyState ==4){//request finished and response is ready
                   var obj = jQuery.parseJSON(http.responseText);
                         if (http.responseText.indexOf("sessionId") >= 0){
-                            window.localStorage.setItem("sparta_url", "http://"+data.url);
+                            window.localStorage.setItem("sparta_url", "https://"+data.url);
                             window.localStorage.setItem("sparta_key", obj.sessionId);
                             API.siteHeader(data.url);//get the cookie header
                         }else{
@@ -30,7 +30,7 @@ SpartaMain.module("Init", function(Init, SpartaMain, Backbone, Marionette, $, _)
             },
              siteHeader: function (url) {
                 var ajax = $.ajax({
-                   url: "http://"+url+"/api/login/android",
+                   url: "https://"+url+"/api/login/android",
                    type: 'GET'
                });
                ajax.done(function (Data) {
