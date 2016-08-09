@@ -75,6 +75,7 @@
     </div><br>
     <div class="hide">
         <input  type="text" value="<%= nid %>" name="nid">
+        <input  type="text" value="<%= field_wo_athlete[0].uid %>" name="uid">
         <input  type="text" value="<%- field_wo_workout_title[0].value %>"  name="wo_title">
         <input  type="number" value="0"  class="wo_status" name="wo_status">
     </div>
