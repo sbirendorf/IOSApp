@@ -4,7 +4,7 @@
         <!-- Hero Header -->
         <div class="h-banner animated fadeindown">
         <h3 class="ath-title"><%= name %></h3>
-          <div class="parallax bg-9">
+          <div class="parallax">
             <div class="profile-userpic">
                 <img src="<%= img %>" class="img-responsive" style="" alt="athlete-image">
             </div>
