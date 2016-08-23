@@ -2681,6 +2681,7 @@ label {
 .workout_tabs_list {
     padding: 2px;
 }
+.workout_tabs_list table td{text-align: center;}
 .workout_tabs_list table{color: black;}
 .workout_tabs_list .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
     color: #fff;
@@ -2771,4 +2772,7 @@ i.ion-chevron-up.mov-rm-link {
 }
 .nowrap {
     white-space: nowrap;
+}
+.profile-usertitle label {
+    width: 100%;
 }

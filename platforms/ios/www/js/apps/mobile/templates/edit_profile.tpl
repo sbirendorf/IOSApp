@@ -17,13 +17,12 @@
         <div class="col s12">
             <ul class="nav nav-tabs profile-tabs">
                 <li<% if(tab == 'info') { %> class="active" <% } %>><a data-toggle="tab" href="#ath-info-tab">Athlete Info</a></li>
-                <li<% if(tab == 'personal') { %> class="active" <% } %>><a data-toggle="tab" href="#ath-info-tab1">Personal Info</a></li>
+               <!-- <li<% if(tab == 'personal') { %> class="active" <% } %>><a data-toggle="tab" href="#ath-info-tab1">Personal Info</a></li> -->
                 <li<% if(tab == 'notifications') { %> class="active" <% } %>><a data-toggle="tab" href="#ath-info-tab2">Notifications</a></li>
             </ul>
 
             <div class="tab-content">
                 <div id="ath-info-tab" class="tab-pane fade <% if(tab == 'info') { %>in active <% } %>">
-                    <h4 style="text-align: center;">Athlete Info</h4>
                     <form class="form-inputs">
                         <div class="hide">
                             <input name="nid" type="numeric" value="<%= info.nid %>" />
@@ -33,25 +32,27 @@
                             <label for="edit-title">User Name: *
                                 <input type="text" maxlength="255" name="username" id="edit-username" size="60" value="<%- info.username %>" required placeholder=""   />
                             </label>
-
+                             <div class="clearfix"></div>
                             <label for="edit-title">Name: *
                                 <input type="text" maxlength="255" name="name" id="edit-name" size="60" value="<%- info.name %>"  required placeholder=""  />
                             </label> 
-
+                             <div class="clearfix"></div>
                             <label for="edit-title">Email: *
                                 <input type="email" maxlength="255" name="email" id="edit-email" size="60" value="<%- info.mail %>" required placeholder=""  />
                             </label>
-
+                             <div class="clearfix"></div>
                             <label for="edit-title">Mobile Phone:
                                 <input type="number"  maxlength="255" name="cellPhone" id="edit-cell-phone" size="60" value="<%- info.cellPhone %>"  />
                             </label>
+                             <div class="clearfix"></div>
                             <label for="edit-title">Password:
                                 <input type="password" maxlength="255" name="password" id="password" size="60" value="<%- info.password %>"  />
                             </label>
+                             <div class="clearfix"></div>
                             <label for="edit-title">Confirm Password:
                                 <input type="password" maxlength="255" name="password_confirm" id="confirm_password" size="60" value="<%- info.password %>"  />
                             </label>
-
+                             <div class="clearfix"></div>
                             <h5>Change Sport Position</h5>
                             <br>
                             <label>Sport:</label>

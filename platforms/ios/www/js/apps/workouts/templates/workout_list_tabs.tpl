@@ -48,7 +48,7 @@
 							                 <% if(e.wo_status == 'trac' && e.best_match == true) { %>
 									           	 <tr style="height: 48px;">
 						                                <td><%- e.title %>- <%- e.workout_day %></td>
-						                                <td><a style="margin-left: 39%;" href="#workout/view/<%- e.nid %>/<%- e.uid %>/<%- e.day %>"><i class="btn wo-log ion-eye" title="View Workout"></i></a></td>
+						                                <td><a href="#workout/view/<%- e.nid %>/<%- e.uid %>/<%- e.day %>"><i class="btn wo-log ion-eye" title="View Workout"></i></a></td>
 						                     	 </tr>
 									         <% } %>
 
