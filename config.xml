@@ -5,7 +5,7 @@
     <author email="sbirendorf@gmail.com" href="">SpartaTrac Team</author>
     <content src="index.html" />
     <preference name="prerendered-icon" value="true" />
-    <icon src="icon.png" />
+    <icon gap:role="default" src="img/icon.png" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
