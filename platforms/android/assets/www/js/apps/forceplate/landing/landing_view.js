@@ -37,17 +37,17 @@ define(["app",
                             var clientsChart = new Chart(context).Bar(barData);
                         }
                     var lineChartData = {
-                        labels: lineLowDates,
+                        labels: lineLowDates.reverse(),
                         datasets: [{
                             strokeColor: '#396410',
                             pointColor: '#396410',
                             fillColor: "rgba(220,220,220,0.01)",
-                            data: lineLowLeft
+                            data: lineLowLeft.reverse()
                         }, {
                             strokeColor: '#3a6078',
                             pointColor: "#3a6078",
                             fillColor: "rgba(220,220,220,0.01)",
-                            data: lineLowRight
+                            data: lineLowRight.reverse()
                         },
                         ]
 

@@ -1,5 +1,5 @@
 define(["app",
-    "tpl!apps/mobile/templates/profile.tpl",
+    "tpl!apps/mobile/templates/profile1.tpl",
     "tpl!apps/mobile/templates/edit_profile.tpl",
     "tpl!apps/mobile/templates/upload_image.tpl",
     "backbone.syphon"],
@@ -76,10 +76,12 @@ define(["app",
                 Profile.EditAthleteProfilePage = Marionette.ItemView.extend({
                     template: EditProfilePageTpl,
                      templateHelpers: function () {
-                        if(this.model.attributes.filePicture ==""){
-                             return {filePicture: "./img/anon_user.png"};
+                        var tabs = this.options.tabs;
+                        console.log(this);
+                        if(this.model.attributes.info.filePicture ==""){
+                             return {filePicture: "./img/anon_user.png" , tab: tabs};
                         }
-                        return {filePicture: localStorage.sparta_url+"/"+this.model.attributes.filePicture};
+                        return {filePicture: localStorage.sparta_url+"/"+this.model.attributes.info.filePicture, tab: tabs};
                     },
                     events: {
                         "submit": "saveClicked",
@@ -88,7 +90,16 @@ define(["app",
                         "keyup #confirm_password": "validatePassword",
                         "click  a.js-upload": "uploadClicked",
                         "change #sport":"sportChange",
-                        "change #position":"positionChange"
+                        "change #position":"positionChange",
+                        "click .ion-android-close":"closeNotification",
+                    },
+                    closeNotification: function(e){
+                        e.stopPropagation();
+                        e.preventDefault();
+                        $(e.target).parent().parent().remove();
+                        var data = {nid:[$(e.target)[0].id], status:"read"};
+                        console.log(data);
+                        SpartaMain.request("common:postData","api/note_mark_read", data);
                     },
                     saveClicked: function (e) {
                         e.stopPropagation();

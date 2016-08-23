@@ -9,10 +9,29 @@ define(["app",
                     events: {
                         "submit": "finishedClicked",
                         "click .collapsible":"collapsibleClicked",
+                        "click .mov-link" :"showVideo",
+                        "click .mov-rm-link" :"hideVideo",
                         "click .work-save":"saveClicked",
                         "click .start-set": "startSet",
                         "click .stop-set": "stopSet",
                         "click .reset-set": "resetSet",
+                    },
+                    showVideo: function (e) {
+                        e.stopPropagation();
+                        e.preventDefault();
+                        var div = "."+$(e.target).next()[0].className;
+                        if( $(div).is(':empty')) {
+                             var frame = ' <i class="ion-chevron-up mov-rm-link"></i><iframe width="95%" height="315" src="'+$(e.target)[0].title+'"></iframe>';
+                             $(div).append(frame);
+                        }else{
+                            $(div).empty();
+                        }
+                    },
+                    hideVideo: function (e) {
+                        e.stopPropagation();
+                        e.preventDefault();
+                        var div = "."+$(e.target).parents()[0].className;
+                        $(div).empty();
                     },
                     startSet: function (e) {
                         e.stopPropagation();

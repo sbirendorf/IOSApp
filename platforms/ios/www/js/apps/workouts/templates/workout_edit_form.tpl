@@ -22,9 +22,11 @@
                       <button id="stop" class="btn btn-danger stop-set" ><span class="ion-stop"></span> Stop</button>
                       <button id="reset" class="btn btn-default reset-set" ><span class="ion-ios-reload"> </span>Reset</button>
                       <br> <br>
-                      Set:<span class="set-number">1</span>
-                       <label>Timer:<span class="the-clock-<%-comp_number %>"><%= comp.timer %></span></label>  
-                    <span class="hide org-the-clock-<%-comp_number %>"><%= comp.timer %></span>
+                    <div class="timer-view">
+                           <label>Set:<span class="set-number">1 </span></label>  
+                           <label> Timer: <span class="the-clock-<%-comp_number %>"> <%= comp.timer %></span></label>  
+                        <span class="hide org-the-clock-<%-comp_number %>"><%= comp.timer %></span>
+                    </div>
 
                     <input type="number" style="display: none" value="<%= comp.promote %>" name="promote[<%- comp_number %>][]">
                     <% _(comp.mov_nid).each(function(mov,mov_number) { %>
@@ -32,7 +34,15 @@
                         <input type="text" value="<%- comp.mov_nid[mov_number] %>" name="movement_nid[<%- comp_number-1 %>][<%- mov_number %>][]"> 
                     </div>
                     <input class="timer-timestamp hide" type="number" value="" name="timerStart[<%- comp_number-1 %>]">
-                    <h5 style="text-align: center;"><strong><%= comp.mov_title[mov_number] %></strong></h5><br>
+                    <h5 style="text-align: center;"><strong><%= comp.mov_title[mov_number] %></strong> 
+                    </h5>
+                     <% if(comp.mov_video[mov_number] != null ) { %>
+                           <i class="ion-ios-videocam mov-link" title="<%- comp.mov_video[mov_number] %>"> </i> 
+                             <div class="video-frame<%- comp_number-1 %><%- mov_number %>"></div>
+                             
+                    <%  }%> 
+
+                    <br>
                     <table class=workout-table>
                         <tr style="background: gray;color: white;"><th><%- comp.mov_set_reps[mov_number][0].int_type %></th><th>Target</th><th><%- comp.mov_set_reps[mov_number][0].vol_type %></th><th>Actual</th></tr>
                         <% _(comp.mov_set_reps[mov_number]).each(function(set,set_number) { %>
@@ -41,7 +51,7 @@
                             <td><input class="workout-cell" readonly type="number" value="<%- set.goal %>" name="goal[<%- comp_number-1 %>][<%- mov_number %>][<%- set_number %>][]"></td>
                             <td><input class="workout-cell" readonly type="number" value="<%- set.target %>" name="target[<%- comp_number-1 %>][<%- mov_number %>][<%- set_number %>][]"></td>
                             <td><input class="workout-cell"  readonly type="number" value="<%- set.load %>" name="reps[<%- comp_number-1 %>][<%- mov_number %>][<%- set_number %>][]"></td>
-                            <td><input class="workout-cell enter" onClick="this.select();" type="tel" value="<%- set.actual %>" name="actual[<%- comp_number-1 %>][<%- mov_number %>][<%- set_number %>][]"></td>
+                            <td><input class="workout-cell enter" onClick="selectText(this);" type="tel" value="<%- set.actual %>" name="actual[<%- comp_number-1 %>][<%- mov_number %>][<%- set_number %>][]"></td>
 
                             <td class="hide"><input type="text" value="<%- set.vol_type %>" name="vol_type[<%- comp_number-1 %>][<%- mov_number %>][<%- set_number %>][]"></td>
                             <td class="hide"><input type="text" value="<%- set.int_type %>" name="int_type[<%- comp_number-1 %>][<%- mov_number %>][<%- set_number %>][]"></td>

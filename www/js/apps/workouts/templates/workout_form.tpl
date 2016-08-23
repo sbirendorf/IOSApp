@@ -30,6 +30,7 @@
                     <div class="hide">
                         <input  type="text" value="<%- mov.weight_type %>" name="weight_type[<%- comp_number %>][<%- mov_number %>][]"> 
                         <input type="text" value="<%- mov.movement_ref %>" name="movement_nid[<%- comp_number %>][<%- mov_number %>][]"> 
+                        <input type="text" value="<%- mov.movement_video %>" name="movement_video[<%- comp_number %>][<%- mov_number %>][]"> 
                     </div>
                     <h5 style="text-align: center;"><strong><%= mov.movement_title %></strong></h5><br>
                     <table class=workout-table>

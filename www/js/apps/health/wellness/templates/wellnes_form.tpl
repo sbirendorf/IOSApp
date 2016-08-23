@@ -11,9 +11,10 @@
     <% switch(q){ case 'field_wn_cold_flu': %>
     <div class="form-group">
         <label for="cold_flu" class="control-label">
-            <%= key %>  
-            <div class="checkbox-inline browser-default" style="margin-left: 20px;">
-                <input type="checkbox" id="toggle-1" name="cold_flu" checked data-toggle="toggle" data-on="Yes" data-off="No" data-onstyle="success" data-offstyle="danger">
+            <%= key %>
+            <div class="clearfix"></div>  
+            <div class="checkbox-inline browser-default" style="float:right;">
+                <input type="checkbox" id="toggle-1" name="cold_flu" data-toggle="toggle" data-on="Yes" data-off="No" data-onstyle="success" data-offstyle="danger">
             </div>
         </label>
     </div>
@@ -21,8 +22,9 @@
     <div class="form-group">
         <label for="pain" class="control-label">
             <%= key %>  
-            <div class="checkbox-inline browser-default" style="margin-left: 20px;">
-                <input type="checkbox" id="toggle-2" name="pain" checked data-toggle="toggle" data-on="Yes" data-off="No" data-onstyle="success" data-offstyle="danger">
+            <div class="clearfix"></div>
+            <div class="checkbox-inline browser-default" style="float:right;">
+                <input type="checkbox" id="toggle-2" name="pain" data-toggle="toggle" data-on="Yes" data-off="No" data-onstyle="success" data-offstyle="danger">
             </div>
     </div>
 </label>
@@ -32,6 +34,7 @@
 <div class="form-group">
     <label for="alterness" class="control-label">
         <%= key %>  
+        <div class="clearfix"></div>
         <div class="checkbox-inline">
             <select name="alterness" class="browser-default">
                 <% if(data.scale == '5') { %>
@@ -57,8 +60,9 @@
 <div class="form-group">
     <label for="appetite" class="control-label">
         <%= key %>  
-        <div class="checkbox-inline browser-default" style="margin-left: 20px;">
-            <input type="checkbox" name="appetite" id="toggle-3" checked data-toggle="toggle" data-on="Yes" data-off="No" data-onstyle="success" data-offstyle="danger">
+        <div class="clearfix"></div>
+        <div class="checkbox-inline browser-default" style="float:right;">
+            <input type="checkbox" name="appetite" id="toggle-3"  data-toggle="toggle" data-on="Yes" data-off="No" data-onstyle="success" data-offstyle="danger">
         </div>
     </label>
 </div>
@@ -66,6 +70,7 @@
 <div class="form-group">
     <label for="mood" class="control-label">
         <%= key %>  
+        <div class="clearfix"></div>
         <div class="checkbox-inline">
             <select name="mood" class="browser-default">
                  <% if(data.scale == '5') { %>
@@ -92,6 +97,7 @@
 <div class="form-group">
     <label for="physical" class="control-label">
         <%= key %>  
+        <div class="clearfix"></div>
         <div class="checkbox-inline">
             <select name="physical" class="browser-default">
                 <% if(data.scale == '5') { %>
@@ -116,7 +122,8 @@
 <% break; case 'field_wn_sleep_restful': %>
 <div class="form-group">
     <label for="restful" class="control-label">
-        <%= key %>  
+        <%= key %> 
+        <div class="clearfix"></div> 
         <div class="checkbox-inline">
             <select name="sleep" class="browser-default">
                 <% if(data.scale == '5') { %>
@@ -143,6 +150,7 @@
 <div class="form-group">
     <label  for="bed_time" class="control-label">
          <%= key %>
+         <div class="clearfix"></div>
         <div class="checkbox-inline">
             <select name="from_sleep" class="browser-default">
                 <option value="0000">12 AM ,0:00</option>
@@ -248,6 +256,7 @@
 <div class="form-group">
     <label  class="control-label">
          Wake Up Time 
+         <div class="clearfix"></div>
         <div class="checkbox-inline">
             <select name="to_sleep" class="browser-default">
                 <option value="0000">12 AM ,0:00</option>
@@ -354,6 +363,7 @@
 <div class="form-group">
     <label for="soreness" class="control-label">
         <%= key %>  
+        <div class="clearfix"></div>
         <div class="checkbox-inline">
             <select name="soreness" class="browser-default">
                 <% if(data.scale == '5') { %>

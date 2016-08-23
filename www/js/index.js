@@ -50,10 +50,13 @@ var app = {
 
 var WorkoutTimer= {
     timer: null,
-
     Start: function(className,target) {
          //change the row color
-         console.log(target);
+
+         //clear all the old timers 
+        for (var i = 1; i < 999; i++){
+             window.clearInterval(i);
+        }
         var number = WorkoutTimer.GetComplex(target); 
         WorkoutTimer.ChangeRowColor(number);
         WorkoutTimer.InsertTimeStamp(number);
@@ -127,3 +130,11 @@ var WorkoutTimer= {
 };
 
 
+function selectText(e){
+    var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    if(iOS){
+        $(e).get(0).setSelectionRange(0,9999);
+    }else{
+        e.select();
+    }
+}

@@ -4,7 +4,7 @@
         <h1>Login</h1>
         <div class="input-field">
             <i class="ion-android-cloud prefix"></i> 
-            <input class="validate" name="url" id="login" value="" type="text"> 
+            <input class="validate" name="url" id="login" value="<%- url %>" type="text"> 
             <label for="login">URL</label>
             <span>No Https require , example: misparta.spartascience.com</span>
         </div>

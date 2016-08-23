@@ -45,47 +45,47 @@ define(["app",
                             var context = document.getElementById('barChart'+c).getContext('2d');
                             var clientsChart = new Chart(context).Bar(barData);
                         }
-var lineChartData = {
-    labels: lineDates,
-    datasets: [{
-        strokeColor: '#9C9192',
-        pointColor: '#9C9192',
-        fillColor: "rgba(220,220,220,0.01)",
-        data: lineLoad
-    }, {
-        strokeColor: '#000',
-        pointColor: "#000",
-        fillColor: "rgba(220,220,220,0.01)",
-        data: lineExplode
-    },
-    {
-        strokeColor: '#B83343',
-        pointColor: "#B83343",
-        fillColor: "rgba(220,220,220,0.01)",
-        data: lineDrive
-    }]
+            var lineChartData = {
+                labels: lineDates.reverse(),
+                datasets: [{
+                    strokeColor: '#9C9192',
+                    pointColor: '#9C9192',
+                    fillColor: "rgba(220,220,220,0.01)",
+                    data: lineLoad.reverse()
+                }, {
+                    strokeColor: '#000',
+                    pointColor: "#000",
+                    fillColor: "rgba(220,220,220,0.01)",
+                    data: lineExplode.reverse()
+                },
+                {
+                    strokeColor: '#B83343',
+                    pointColor: "#B83343",
+                    fillColor: "rgba(220,220,220,0.01)",
+                    data: lineDrive.reverse()
+                }]
 
-};
+            };
 
-var ctx = document.getElementById("canvas").getContext("2d");
-var LineChartDemo = new Chart(ctx).Line(lineChartData, {
-    pointDotRadius: 3,
-    bezierCurve: false,
-    scaleShowVerticalLines: false,
-    backgroundColor: "#fff",
-    scaleGridLineColor: "black"
-});
+            var ctx = document.getElementById("canvas").getContext("2d");
+            var LineChartDemo = new Chart(ctx).Line(lineChartData, {
+                pointDotRadius: 3,
+                bezierCurve: false,
+                scaleShowVerticalLines: false,
+                backgroundColor: "#fff",
+                scaleGridLineColor: "black"
+            });
 
-                      setTimeout(function () {
-                           var swiper = new Swiper('.swiper-container', {
-                                pagination: '.swiper-pagination',
-                                paginationClickable: true,
-                                spaceBetween: 30,
-                                loop: true
-                            });
-                    },350);
+              setTimeout(function () {
+                   var swiper = new Swiper('.swiper-container', {
+                        pagination: '.swiper-pagination',
+                        paginationClickable: true,
+                        spaceBetween: 30,
+                        loop: true
+                    });
+            },350);
                         
-                    }
+    }
                 });
             });
             return SpartaMain.Forceplate.Scan;

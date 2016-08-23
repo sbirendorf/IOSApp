@@ -17,7 +17,7 @@
     </div>
      <div class="control-group">
         <label for="Prevent" class="control-label">
-            Prevent:
+            Soft Tissue Care:
             
             <br><label class="option" for="Release-Upper" style="display: flex;">
                 <input type="checkbox" id="toggle-1" name="prevent_upper" checked data-toggle="toggle" data-on="Yes" data-off="No" data-onstyle="success" data-offstyle="danger">
@@ -36,19 +36,27 @@
       <div class="control-group">
           <label>Sleep:</label>
             <select name="sleep" class="browser-default">
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>  
+                <option value="4">4 hrs</option>
+                <option value="4.5">4.5 hrs</option>
+                <option value="5">5 hrs</option>
+                <option value="5.5">5.5 hrs</option>
+                <option value="5">6 hrs</option>
+                <option value="6.5">6.5 hrs</option>
+                <option value="7">7 hrs</option>
+                <option value="7.5">7.5 hrs</option>
+                <option value="8">8 hrs</option>
+                <option value="8.5">8.5 hrs</option>
+                <option value="9">9 hrs</option>
+                <option value="9.5">9.5 hrs</option>
+                <option value="10">10 hrs</option>
+                <option value="10.5">10.5 hrs</option>
+                <option value="11">11 hrs</option>
+                <option value="11.5">11.5 hrs</option>
+                <option value="12">12 hrs</option>  
          </select>
     </div>
      <div class="control-group">
-            <label>Servings Protein (g - grams):</label>
+            <label>Servings of Protein (g - grams):</label>
              <select name="protein" class="browser-default">
                 <option value="100">100</option>
                 <option value="125">125</option>
@@ -67,7 +75,7 @@
          </div>
     </div>
      <div class="control-group">
-            <label> Servings Vegetables:</label>
+            <label> Servings of Vegetables:</label>
             <select name="veg" class="browser-default">
                 <option value="1">1</option>
                 <option value="2">2</option>  
@@ -82,17 +90,26 @@
          </select>
     </div>
      <div class="control-group">
-            <label > Servings Water:</label>
+            <label > Servings of Water (liters):</label>
                 <select name="water" class="browser-default">
                 <option value="1">1</option>
+                <option value="1.5">1.5</option>
                 <option value="2">2</option>  
+                <option value="2.5">2.5</option>  
                 <option value="3">3</option> 
+                <option value="3.5">3.5</option>
                 <option value="4">4</option>
+                <option value="4.5">4.5</option>
                 <option value="5">5</option>
+                <option value="5.5">5.5</option>
                 <option value="6">6</option>
+                <option value="6.5">6.5</option>
                 <option value="7">7</option>
+                <option value="7.5">7.5</option>
                 <option value="8">8</option>
+                <option value="8.5">8.5</option>
                 <option value="9">9</option>
+                <option value="9.5">9.5</option>
                 <option value="10">10</option>
          </select>
     </div>

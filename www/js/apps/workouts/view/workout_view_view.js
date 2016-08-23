@@ -6,6 +6,27 @@ define(["app",
                 ViewPage.FormPage = Marionette.ItemView.extend({
                     className: 'item',
                     template: FormTpl,
+                    events: {
+                         "click .mov-rm-link" :"hideVideo",
+                        "click .mov-link" :"showVideo"
+                    },
+                    showVideo: function (e) {
+                        e.stopPropagation();
+                        e.preventDefault();
+                        var div = "."+$(e.target).next()[0].className;
+                        if( $(div).is(':empty')) {
+                             var frame = ' <i class="ion-chevron-up mov-rm-link"></i><iframe width="95%" height="315" src="'+$(e.target)[0].title+'"></iframe>';
+                             $(div).append(frame);
+                        }else{
+                            $(div).empty();
+                        }
+                    },
+                    hideVideo: function (e) {
+                        e.stopPropagation();
+                        e.preventDefault();
+                        var div = "."+$(e.target).parents()[0].className;
+                        $(div).empty();
+                    },
                      onShow: function () {
                         function close_accordion_section() {
                             $('.accordion .accordion-section-title').removeClass('active');

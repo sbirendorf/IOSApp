@@ -5,8 +5,9 @@ define(["app", "entities/common", "apps/forceplate/scan/scan_view", "common/comm
                     mobileScanPage: function () {
                         var load = new Common.Loading();
                         SpartaMain.MainRegion.show(load);
-                        var fetchingData = SpartaMain.request("common:getModalExact", "get_all_scan_for_user");
+                        var fetchingData = SpartaMain.request("common:getModalExact", "get_all_scan_for_user/10");
                         fetchingData.done(function (Data) {
+                            console.log(Data);
                             var page = new Scan.ScansPage({
                                 model: Data
                             });

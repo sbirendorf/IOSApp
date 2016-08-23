@@ -21,8 +21,8 @@
                         </div>
                         <% if(t.type == 'notification') { %>
 
-                             
-                              <span><%- t.value.field_no_note_body_value %></span>
+                             <a href="#profile/edit/notifications" <span><%- t.value.field_no_note_body_value %></span> </a>
+                              
                         <% }else { %>
                              <p>
                                  <a href="#<%- t.type %>"> New <%- t.type %> </a>

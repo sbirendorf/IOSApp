@@ -4,8 +4,7 @@
     <!-- Swiper -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <% _(total_scans).each(function(s,scan) { %>
-            
+            <% _(total_scans.reverse()).each(function(s,scan) { %>
             <div class="swiper-slide">
                 <div id="bar_chart" class="card animated fadeinup delay-3">
                     <div class="legend">
@@ -20,7 +19,7 @@
                     </div>
                 </div>
             </div>
-            <% }); %>
+            <% }); %> 
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div><br>

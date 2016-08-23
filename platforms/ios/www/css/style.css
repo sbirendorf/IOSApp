@@ -175,6 +175,9 @@ th {border-radius: 0px;}
 .grey-blue {
     background-color: #f1f4f5;
 }
+.light-grey{
+     background-color: #b7b7b7;
+}
 .text-color {
     color: #76838f !important;
 }
@@ -2480,9 +2483,11 @@ span.ui-icon.ui-icon-circle-triangle-w {color: white;padding-right: 10px;
 span.ui-icon.ui-icon-circle-triangle-e {color: white;}
 #bar_chart {
     background: #F1F1F1;
+        min-width: 290px;
 }
 #line_chart {
      background: #F1F1F1;
+         min-width: 290px;
 }
 
 .wellnes-form label.btn.btn-danger.active.toggle-off {
@@ -2569,17 +2574,23 @@ thead {
     width: 112%;
 }
 .profile-userpic img {
-     float: left;
-    margin: 0 auto;
-    max-width: 175px;
+    height: 95%;
+    width: 70%;
+    top: 42px;
+    max-width: 214px;
+    max-height: 160px;
     min-width: 130px;
+    min-height: 190px;   
     -webkit-border-radius: 8% !important;
     -moz-border-radius: 8% !important;
     border-radius: 8% !important;
 }
-
-.profile-usertitle {
-  margin-top: -6px;
+h3.ath-title {
+    color: black;
+    text-align: center;
+    height: 33px;
+    position: absolute;
+    width: 100%;
 }
 
 .profile-userbuttons {
@@ -2651,7 +2662,14 @@ thead {
 }
 
 .active-set{background: #d8524e};
-
+.active-set .enter {
+    color: white;
+    background: black;
+}
+input.workout-cell.enter {
+    background: #bdbdbd;
+    color: white;
+}
 a {
     color: #a92c00;
     text-decoration: none;
@@ -2663,6 +2681,7 @@ label {
 .workout_tabs_list {
     padding: 2px;
 }
+.workout_tabs_list table{color: black;}
 .workout_tabs_list .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
     color: #fff;
     background-color: #b51010;
@@ -2690,7 +2709,7 @@ form.wellnes-form {
     margin-left: -20px;
 }
 .wo-log {
-    background: #000000;
+    background: #bd081c;
 }
 /* workout matrix table */
 .workout-table input[type=text],input[type=number],input[type=tel]{
@@ -2717,4 +2736,39 @@ form.wellnes-form {
 }
 #slide-out-left li a {
     font-size: 14px;
+}
+.timer-view {
+    font-size: 1.4em;
+    text-align: center;
+    border: grey solid 2px;
+    padding-top: 5px;
+}
+.timer-view label {
+    font-size: 1.1em;
+}
+i.ion-chevron-up.mov-rm-link {
+    float: right;
+    margin-right: 6%;
+    color: black;
+    margin-top: -34px;
+}
+.mov-link{    color: black;
+    margin-top: -34px;
+    position: absolute;}
+
+.ui-dialog{z-index: 99}
+
+
+.nav-tabs > li, .nav-pills > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+     zoom:1; /* hasLayout ie7 trigger */
+}
+
+.nav-pills {
+    text-align:center;
+}
+.nowrap {
+    white-space: nowrap;
 }

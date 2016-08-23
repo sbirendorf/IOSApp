@@ -10,7 +10,7 @@
     </div>
 </li>
 <li><a href="#home" class="no-child"><i class="ion-android-home"></i>Home</a></li>
-<li><a href="#profile/edit" class="no-child"><i class="ion-person"></i>Profile</a></li>
+<li><a href="#profile/edit/info" class="no-child"><i class="ion-person"></i>Profile</a></li>
 <li><a href="#workouts" class="no-child"><i class="ion-clipboard"></i>Workouts</a></li>
 <li><a href="#scan" class="no-child"><i class="ion-podium"></i>Scan</a></li>
 <li><a href="#balance" class="no-child"><i class="ion-ios-body"></i> Balance</a></li>

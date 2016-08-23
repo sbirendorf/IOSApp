@@ -24,7 +24,7 @@ define(["app",
                                    
                                      require(["apps/mobile/profile_page_controller"], function (Controller) {
                                         Controller.profileEditPage();
-                                        SpartaMain.navigate('profile/edit');
+                                        SpartaMain.navigate('profile/edit/info');
                                     });
                                     var load = new CommonView.Loading();
                                     SpartaMain.MainRegion.show(load);

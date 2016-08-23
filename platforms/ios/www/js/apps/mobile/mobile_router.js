@@ -9,7 +9,7 @@ define(["app"], function (SpartaMain) {
                 "scan": 'scanPage',
                 "balance": 'balancePage',
                 "landing": 'landingPage',
-                "profile/edit": 'profileEditPage'
+                "profile/edit/:id": 'profileEditPage'
             }
         });
 
@@ -39,9 +39,9 @@ define(["app"], function (SpartaMain) {
                     Controller.mobileLandingPage();
                 });
             },
-            profileEditPage: function () {
+            profileEditPage: function (id) {
                  require(["apps/mobile/profile_page_controller"], function (Controller) {
-                    Controller.profileEditPage();
+                    Controller.profileEditPage(id);
                 });
             },
             loginPage: function () {
@@ -59,6 +59,7 @@ define(["app"], function (SpartaMain) {
          Mobile.on("mobile:start", function () {
             require(["apps/mobile/main_page_controller"], function (Controller) {
                     Controller.mobileMainPage();
+                //    SpartaMain.navigate('home');
                 });
         });
         Mobile.on("mobile:login", function () {

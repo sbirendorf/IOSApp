@@ -113,7 +113,9 @@ SpartaMain.module("CommonEntities", function(CommonEntities, SpartaMain, Backbon
                     data: {"data": json},
                     type: 'POST'
                 });
+                console.log(site+"/"+url);
                 ajax.done(function (Data) {
+                  console.log(Data);
                     var rtnData = new CommonEntities.Item();
                     rtnData.set(Data);
                     defer.resolve(rtnData);
@@ -187,6 +189,7 @@ SpartaMain.module("CommonEntities", function(CommonEntities, SpartaMain, Backbon
         return API.setCommonData(url);
     });
     SpartaMain.reqres.setHandler("common:postData", function(url,data) {
+      console.log(data);
         return API.postCommonData(url,data);
     });
     SpartaMain.reqres.setHandler("common:postFile", function(url,data) {

@@ -4,7 +4,7 @@
     <!-- Swiper -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <% _(total_lower).each(function(s,scan) { %>
+            <% _(total_lower.reverse()).each(function(s,scan) { %>
             
             <div class="swiper-slide">
                 <div id="bar_chart" class="card animated fadeinup delay-3">

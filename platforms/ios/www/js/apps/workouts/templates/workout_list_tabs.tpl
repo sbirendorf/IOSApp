@@ -21,13 +21,11 @@
 						                <% _(data).each(function(e) { %>
 							                 <% if(e.wo_status == 'Logged' || e.wo_status == 'Inprogress') { %>
 									           	 <tr style="height: 48px;">
-						                                <td><%- e.title %> - <%- e.workout_day %></td>
-						                                <td>
-						                                	<%- e.wo_date %>
-						                                </td>
+						                                <td><%- e.title %></td>
+						                                <td><span class="nowrap"><%- e.wo_date %></span></td>
 						                                <th><%- e.wo_status %></th>
 						                                <td>
-						                                <a href="#workout/<%- e.nid %>/edit" class="btn" style="background:black;"><i class="ion-edit"></i></a>
+						                                <a href="#workout/<%- e.nid %>/edit" class="btn wo-log"><i class="ion-edit"></i></a>
 						                                </td>
 						                     	 </tr>
 									         <% } %>
@@ -42,7 +40,7 @@
 						              <thead class="thead-inverse">
 						                  <tr>
 						                      <th>Workout</th>
-						                      <th>View/Start</th>
+						                      <th>View</th>
 						                  </tr>
 						              </thead>
 						              <tbody>
@@ -50,7 +48,7 @@
 							                 <% if(e.wo_status == 'trac' && e.best_match == true) { %>
 									           	 <tr style="height: 48px;">
 						                                <td><%- e.title %>- <%- e.workout_day %></td>
-						                                <td><a href="#workout/view/<%- e.nid %>/<%- e.uid %>/<%- e.day %>"><i class="btn wo-log ion-eye" title="View Workout"></i></a></td>
+						                                <td><a style="margin-left: 39%;" href="#workout/view/<%- e.nid %>/<%- e.uid %>/<%- e.day %>"><i class="btn wo-log ion-eye" title="View Workout"></i></a></td>
 						                     	 </tr>
 									         <% } %>
 
@@ -72,7 +70,7 @@
 						                  <tr>
 						                      <th>Workout</th>
 						                      <th>Date</th>
-						                      <th>Action</th>
+						                      <th>View</th>
 						                  </tr>
 						              </thead>
 						              <tbody>
@@ -82,8 +80,7 @@
 						                                <td><%- e.title %>- <%- e.workout_day %></td>
 						                                <td> </td>
 						                                <td>
-							                                <a class="btn btn-success" href="#workout/create/<%- e.nid %>/<%- e.uid %>/<%- e.day %>"><i class="ion-play" title="Log Workout"></i></a> 
-							                                <a style="margin-left: 5px;" class="btn wo-log" href="#workout/view/<%- e.nid %>/<%- e.uid %>/<%- e.day %>">View</a>
+							                                <a style="display: block; text-align: center;" class="btn wo-log ion-eye" href="#workout/view/<%- e.nid %>/<%- e.uid %>/<%- e.day %>"></a>
 						                                </td>
 						                     	 </tr>
 									         <% } %>
@@ -91,7 +88,7 @@
 									         <% if(e.wo_status == 'Temporary') { %>
 									           	 <tr style="height: 48px;">
 						                                <td><%- e.title %>- <%- e.workout_day %></td>
-						                                <td>
+						                                <td class="nowrap">
 						                                	<%- e.wo_date %>
 						                                </td>
 						                                <td><span class="wo-activate btn btn-warning" id="<%- e.nid %>">Activate</span></td>

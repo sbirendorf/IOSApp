@@ -37,6 +37,14 @@ define(["app",
                 // });
                 Main.LogInPage = Marionette.ItemView.extend({
                     template: LoginTpl,
+                    templateHelpers: function () {
+                        if(localStorage.sparta_url != null ){
+                            return {url: localStorage.sparta_url.slice(7)};
+                        }else{
+                             return {url: ''};
+                        }
+                       
+                    },
                     events: {
                         "click .sp-login": "login"
                     },
