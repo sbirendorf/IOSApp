@@ -23,6 +23,7 @@
 
         <a class="waves-effect waves-light btn-large accent-color width-100 m-b-20 animated bouncein delay-4 sp-login" href="">Login</a> 
       <!--   <span>Don't have an account? <a class="primary-text" href="#signup">Sign Up</a></span> -->
+        Version 2.1
     </div><!-- End of Main Contents -->
 </form>
 <center><img src="img/preloader.gif" style=" width: 30px;height: 30px;margin-top: 150px;"></center>
