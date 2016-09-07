@@ -26,7 +26,7 @@ define(["app",
                         if(SpartaMain.getCurrentRoute()==''){
                              callBack = "mobile:start";
                         }
-                        require(["apps/health/health_router"], function (Controller) {
+                        require(["apps/router"], function (Controller) {
                             Controller.trigger("form:submit", data, callBack,'screen');
                         });
                     },onShow:function (e) {

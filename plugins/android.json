@@ -11,5 +11,15 @@
             "PACKAGE_NAME": "com.spartascience.spartatrac"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "org.apache.cordova.device": {
+            "PACKAGE_NAME": "com.spartascience.spartatrac"
+        },
+        "de.appplant.cordova.plugin.local-notification": {
+            "PACKAGE_NAME": "com.spartascience.spartatrac"
+        },
+        "org.apache.cordova.dialogs": {
+            "PACKAGE_NAME": "com.spartascience.spartatrac"
+        }
+    }
 }

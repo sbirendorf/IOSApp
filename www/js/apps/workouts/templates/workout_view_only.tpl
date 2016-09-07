@@ -27,8 +27,13 @@
                              
                     <%  }%> 
                     <br>
-                    <table class=workout-table>
-                        <tr style="background: gray;color:white;"><th><%- mov.int_unit %></th><th>Target</th><th>Actual</th><th><%- mov.vol_unit %></th></tr>
+                    <table class=table workout-table>
+                        <tr style="background: gray;color:white;">
+                            <th><%- mov.int_unit %></th>
+                            <th>Target</th>
+                            <th><%- mov.vol_unit %></th>
+                            <th>Actual</th>
+                        </tr>
                         <% _(mov.goal).each(function(set,set_number) { %>
                         <tr class="inner-set-number-<%-set_number %>">
                             <td class="workout-cell"><%- mov.goal[set_number] %></td>

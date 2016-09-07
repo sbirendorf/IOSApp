@@ -13,17 +13,17 @@
 						                  <tr>
 						                      <th>Workout</th>
 						                      <th>Date</th>
-						                      <th>Status</th>
+						                   <!--   <th>Status</th>-->
 						                      <th>Edit</th>
 						                  </tr>
 						              </thead>
 						              <tbody>
 						                <% _(data).each(function(e) { %>
-							                 <% if(e.wo_status == 'Logged' || e.wo_status == 'Inprogress') { %>
+							                 <% if(e.wo_status == 'Logged') { %>
 									           	 <tr style="height: 48px;">
 						                                <td><%- e.title %></td>
 						                                <td><span class="nowrap"><%- e.wo_date %></span></td>
-						                                <th><%- e.wo_status %></th>
+						                         <!--       <th><%- e.wo_status %></th> -->
 						                                <td>
 						                                <a href="#workout/<%- e.nid %>/edit" class="btn wo-log"><i class="ion-edit"></i></a>
 						                                </td>
@@ -52,7 +52,7 @@
 						                     	 </tr>
 									         <% } %>
 
-									         <% if(e.wo_status == 'Ready') { %>
+									         <% if(e.wo_status == 'Ready' || e.wo_status == 'Inprogress') { %>
 									           	 <tr style="height: 48px;">
 						                                <td><%- e.title %>- <%- e.workout_day %></td>
 						                                <td><a href="#workout/<%- e.nid %>/edit"><i class="btn wo-log ion-eye" title="View Workout"></i></a></td>

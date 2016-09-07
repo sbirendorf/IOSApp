@@ -18,9 +18,9 @@
                     <input class="hide" type="textarea" readonly value="<%= comp.note %>" name="notes[<%- comp_number-1 %>][]">
                     <input class="hide" readonly type="text" value="<%= comp.timer %>" name="timer[<%- comp_number-1 %>]">
                     <label>Notes:<%= comp.notes %></label><br>
-                     <button id="start" class="btn btn-success start-set"><span class="ion-play"></span>Start</button>
-                      <button id="stop" class="btn btn-danger stop-set" ><span class="ion-stop"></span> Stop</button>
-                      <button id="reset" class="btn btn-default reset-set" ><span class="ion-ios-reload"> </span>Reset</button>
+                     <button id="start" style="float: left;" class="btn btn-success start-set"><span class="ion-play"></span>Start</button>
+                      <!--<button id="stop" class="btn btn-danger stop-set" ><span class="ion-stop"></span> Stop</button>-->
+                      <button id="reset" style="float: right;" class="btn btn-danger reset-set" ><span class="ion-ios-reload"> </span>Reset</button>
                       <br> <br>
                     <div class="timer-view">
                            <label>Set:<span class="set-number">1 </span></label>  
@@ -44,13 +44,18 @@
 
                     <br>
                     <table class=workout-table>
-                        <tr style="background: gray;color: white;"><th><%- comp.mov_set_reps[mov_number][0].int_type %></th><th>Target</th><th><%- comp.mov_set_reps[mov_number][0].vol_type %></th><th>Actual</th></tr>
+                        <tr style="background: gray;color: white;">
+                            <th><%- comp.mov_set_reps[mov_number][0].int_type %></th>
+                            <th>Target</th>
+                            <th><%- comp.mov_set_reps[mov_number][0].vol_type %></th>
+                            <th>Actual</th>
+                        </tr>
                         <% _(comp.mov_set_reps[mov_number]).each(function(set,set_number) { %>
                         <% if(set.goal != '0' || set.target != '0' || set.load != '0') { %>    
                         <tr class="inner-set-number-<%-set_number+1 %>">
                             <td><input class="workout-cell" readonly type="number" value="<%- set.goal %>" name="goal[<%- comp_number-1 %>][<%- mov_number %>][<%- set_number %>][]"></td>
                             <td><input class="workout-cell" readonly type="number" value="<%- set.target %>" name="target[<%- comp_number-1 %>][<%- mov_number %>][<%- set_number %>][]"></td>
-                            <td><input class="workout-cell"  readonly type="number" value="<%- set.load %>" name="reps[<%- comp_number-1 %>][<%- mov_number %>][<%- set_number %>][]"></td>
+                            <td><input class="workout-cell enter" onClick="selectText(this);" type="tel" value="<%- set.load %>" name="reps[<%- comp_number-1 %>][<%- mov_number %>][<%- set_number %>][]"></td>
                             <td><input class="workout-cell enter" onClick="selectText(this);" type="tel" value="<%- set.actual %>" name="actual[<%- comp_number-1 %>][<%- mov_number %>][<%- set_number %>][]"></td>
 
                             <td class="hide"><input type="text" value="<%- set.vol_type %>" name="vol_type[<%- comp_number-1 %>][<%- mov_number %>][<%- set_number %>][]"></td>

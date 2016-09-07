@@ -42,7 +42,7 @@ define(["app",
                         var data = Backbone.Syphon.serialize(this);
                         //after clicking submit I disable the button so it doesn't get clicked a bunch more times
                         $("input[type=submit]").attr('disabled','true');
-                        require(["apps/health/health_router"], function (Controller) {
+                        require(["apps/router"], function (Controller) {
                             Controller.trigger("form:submit", data,'rpe');
                         });
                     },

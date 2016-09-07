@@ -6,8 +6,8 @@ define(["app",
                 Common.Controller = {
                     createWorkout: function (data,type) {
                         if(type == 'finished'){
-                            var load = new CommonView.Loading();
-                            SpartaMain.MainRegion.show(load);
+                            var load = new CommonView.LoadingModal();
+                            SpartaMain.DialogRegion.show(load);
                         }
                         var fetchingData = SpartaMain.request("common:postData","api/create_workout", data);
                         fetchingData.done(function (Data) {
@@ -20,6 +20,7 @@ define(["app",
                                     });
                                     var load = new CommonView.Loading();
                                     SpartaMain.MainRegion.show(load);
+                                    SpartaMain.DialogRegion.empty();
                                 }
                                 SpartaMain.MessageRegion.show(msg);   
                             
@@ -28,7 +29,8 @@ define(["app",
                             var error = new CommonView.ServerError({
                                 error: err
                             });
-                            SpartaMain.MainRegion.show(error);
+                            SpartaMain.DialogRegion.empty();
+                            SpartaMain.MessageRegion.show(error);
                         });
                     }
                     

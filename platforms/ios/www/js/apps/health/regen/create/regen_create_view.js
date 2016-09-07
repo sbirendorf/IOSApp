@@ -37,7 +37,7 @@ define(["app",
                         e.stopPropagation();
                         e.preventDefault();
                         var data = Backbone.Syphon.serialize(this); 
-                        require(["apps/health/health_router"], function (Controller) {
+                        require(["apps/router"], function (Controller) {
                             Controller.trigger("form:submit", data,'regen');
                         });
                     },

@@ -59,6 +59,7 @@
     template: loading_Tpl
   });
    CommonFunction.LoadingModal = Marionette.ItemView.extend({
+    className: 'loading-modal-box',
     template: loadingModalTpl
   });
   CommonFunction.ServerError = Marionette.ItemView.extend({

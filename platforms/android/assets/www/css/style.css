@@ -2747,6 +2747,19 @@ form.wellnes-form {
 .timer-view label {
     font-size: 1.1em;
 }
+.timer-view-active {
+    text-align: center;
+    border: grey solid 2px;
+    padding-top: 5px;
+    position: fixed;
+    width: 89%;
+    margin-left: -6px;
+    top: 56px;
+    background: #5cb85c;
+}
+.timer-view-active label {
+    color:#fff;
+}
 i.ion-chevron-up.mov-rm-link {
     float: right;
     margin-right: 6%;
@@ -2775,4 +2788,28 @@ i.ion-chevron-up.mov-rm-link {
 }
 .profile-usertitle label {
     width: 100%;
+}
+
+.open-right .btn-link span.ion-ios-bell {
+    color: white;
+}
+.open-right .note-badge-notify {
+    background: #b51010;
+    position: relative;
+    top: -65px;
+    left: 10px;
+    color: white;
+    padding: 4px;
+    border-radius: 45px;
+}
+.loading-modal-box {
+    width: 40%;
+    position: fixed;
+    height: 20%;
+    top: 30%;
+    left: 31%;
+    background: gainsboro;
+}
+.version {
+    display: inline-block;
 }

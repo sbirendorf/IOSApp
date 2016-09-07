@@ -16,6 +16,8 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+//show the app version to the end-user
+var appVersion = "2.2";
 var app = {
     // Application Constructor
     initialize: function() {
@@ -58,11 +60,17 @@ var WorkoutTimer= {
              window.clearInterval(i);
         }
         var number = WorkoutTimer.GetComplex(target); 
+        $("#accordion-"+number+" .timer-view").addClass( "timer-view-active" );
         WorkoutTimer.ChangeRowColor(number);
         WorkoutTimer.InsertTimeStamp(number);
+
+        var startTime = Date.now();
         this.timer = setInterval(function() {
 
-            var timer = $('.'+className+number).html();
+            var delta = Date.now() - startTime;     // milliseconds
+                delta = Math.round(startTime - ( startTime - (delta / 1000)));
+
+            var timer = $('.org-'+className+number).html();
             if(timer == null){
                 WorkoutTimer.Stop();
                 return;
@@ -74,19 +82,26 @@ var WorkoutTimer= {
                 WorkoutTimer.Stop();
                 return;
             }
-            seconds -= 1;
-            if (minutes < 0) return WorkoutTimer.Stop();
-            if (minutes < 10 && minutes.length != 2) minutes = '0' + minutes;
-            if (seconds < 0 && minutes != 0) {
-                minutes -= 1;
-                seconds = 59;
-            }
-            else if (seconds < 10 && length.seconds != 2) seconds = '0' + seconds;
-            $('.'+className+number).html(minutes + ':' + seconds);
 
-            if (minutes == 0 && seconds == 0){
+            var timeSec = parseInt(timer[0], 10) * 60 + parseInt(timer[1], 10);
+            timeSec = timeSec - delta;
+            var timerMin = parseInt(timeSec/60);
+            if (timerMin < 10 && length.timerMin != 2) timerMin = '0' + timerMin;
+            var timerSec = timeSec%60;
+            if (timerSec < 10 && length.timerSec != 2) timerSec = '0' + timerSec;
+            $('.'+className+number).html(timerMin+":"+timerSec);
+
+            // seconds -= 1;
+            // if (minutes < 0) return WorkoutTimer.Stop();
+            // if (minutes < 10 && minutes.length != 2) minutes = '0' + minutes;
+            // if (seconds < 0 && minutes != 0) {
+            //     minutes -= 1;
+            //     seconds = 59;
+            // }
+            // else if (seconds < 10 && length.seconds != 2) seconds = '0' + seconds;
+            // $('.'+className+number).html(minutes + ':' + seconds);
+            if (timerSec == 0 && timerMin == 0){
                 WorkoutTimer.Stop();
-                navigator.vibrate(1000);
                 WorkoutTimer.Reset('the-clock-',target);
                 WorkoutTimer.IncreaseSet(number);
                 WorkoutTimer.ModalWindow('the-clock-',target);

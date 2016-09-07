@@ -4,7 +4,7 @@
         <input name="uid" type="numeric" value="<%= uid %>" />
     </div>
     <br>
-    <h4 style="text-align: center;">Create Wellness</h4>
+    <h4>Create Wellness</h4>
     <div class="form-error"></div>
     <br>
     <% _(data).each(function(key, q) { %>
